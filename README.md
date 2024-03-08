@@ -13,13 +13,13 @@ Phantomizer works in a question/anwser syntax.
 Here is an example flow.
 | Prompt                                                                                               | Example Response                                 | Comment                                     |
 |------------------------------------------------------------------------------------------------------|--------------------------------------------------|---------------------------------------------|
-| [#] Enter the target executable stored in C:\Windows\System32 you will be calling (ending in ".exe") | powershell.exe                                   | the name executable to be run               |
+| [#] Enter the target executable stored in C:\Windows\System32 you will be calling (ending in ".exe"):| powershell.exe                                   | the name executable to be run               |
 | [#] Enter a FULL FALSE COMMAND to appear in logs:                                                    | powershell.exe full false command -c fakeexe.exe | this is a false command will be visible in logs       |
 | [#] Enter the FULL TRUE COMMAND to be executed:                                                      | powershell.exe -NoInteractive evil.exe           | this is the intended command to be executed |
 | [#] Enter 'y' to confirm, 'n' to re-enter, or 'q' to quit:                                           | y                                                |                                             |
 
 ## Known Issues
-Entering NULL information into any of the prompts will cause Phantomizer to fail
+- Entering NULL information into any of the prompts will cause Phantomizer to fail
 
 ## Update Plans
 - Add support for issuing multiple commands in one Phantomizer instance
