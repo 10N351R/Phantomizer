@@ -5,8 +5,10 @@ Author: 10N351R, Base Functions Borrowed From: mrd0x
 
 Phantomizer is a post-exploitation utility for Windows targets that has the ability to run executables stored in C:/Windows/System32 with spoofed arguments to avoid disclosing "true" arguments to startup-based and runtime-based process monitors and logging solutions.
 
+## How Phantomizer Works
+
 ## Demo
-Runing Phantomizer
+Running Phantomizer
 ![alt text](https://github.com/10N351R/Phantomizer/blob/main/Images/20240308173432.png)
 
 Process tree viewed in Process Hacker
@@ -23,8 +25,6 @@ Viewing the powershell instance properties in Process Hacker
 
 Viewing the conhost instance properties in Process Hacker
 ![alt_text](https://github.com/10N351R/Phantomizer/blob/main/Images/20240308174124.png)
-
-## How Phantomizer Works
 
 ## Syntax
 Phantomizer works in a question/anwser syntax.
