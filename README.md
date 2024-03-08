@@ -1,8 +1,7 @@
 ![alt text](https://github.com/10N351R/Phantomizer/blob/main/Phantomizer_logo.png)
 
 # Phantomizer
-Author: 10N351R
-Base Functions Borrowed From: mrd0x
+Author: 10N351R, Base Functions Borrowed From: mrd0x
 
 Phantomizer is a post-exploitation utility for Windows targets that has the ability to run executables stored in C:/Windows/System32 with spoofed arguments to avoid disclosing "true" arguments to startup-based and runtime-based process monitors and logging solutions.
 
