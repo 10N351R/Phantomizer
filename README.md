@@ -7,6 +7,17 @@ Phantomizer is a post-exploitation utility for Windows targets that has the abil
 
 ## How Phantomizer Works
 
+## Syntax
+Phantomizer works in a question/anwser syntax.
+
+Here is an example flow.
+| Prompt                                                                                               | Example Response                                 | Comment                                     |
+|------------------------------------------------------------------------------------------------------|--------------------------------------------------|---------------------------------------------|
+| [#] Enter the target executable stored in C:\Windows\System32 you will be calling (ending in ".exe"):| powershell.exe                                   | the name executable to be run               |
+| [#] Enter a FULL FALSE COMMAND to appear in logs:                                                    | powershell.exe full false command -c fakeexe.exe | this is a false command will be visible in logs       |
+| [#] Enter the FULL TRUE COMMAND to be executed:                                                      | powershell.exe -NoInteractive evil.exe           | this is the intended command to be executed |
+| [#] Enter 'y' to confirm, 'n' to re-enter, or 'q' to quit:                                           | y                                                |                                             |
+
 ## Demo
 Running Phantomizer
 ![alt text](https://github.com/10N351R/Phantomizer/blob/main/Images/20240308173432.png)
@@ -25,17 +36,6 @@ Viewing the powershell instance properties in Process Hacker
 
 Viewing the conhost instance properties in Process Hacker
 ![alt_text](https://github.com/10N351R/Phantomizer/blob/main/Images/20240308174124.png)
-
-## Syntax
-Phantomizer works in a question/anwser syntax.
-
-Here is an example flow.
-| Prompt                                                                                               | Example Response                                 | Comment                                     |
-|------------------------------------------------------------------------------------------------------|--------------------------------------------------|---------------------------------------------|
-| [#] Enter the target executable stored in C:\Windows\System32 you will be calling (ending in ".exe"):| powershell.exe                                   | the name executable to be run               |
-| [#] Enter a FULL FALSE COMMAND to appear in logs:                                                    | powershell.exe full false command -c fakeexe.exe | this is a false command will be visible in logs       |
-| [#] Enter the FULL TRUE COMMAND to be executed:                                                      | powershell.exe -NoInteractive evil.exe           | this is the intended command to be executed |
-| [#] Enter 'y' to confirm, 'n' to re-enter, or 'q' to quit:                                           | y                                                |                                             |
 
 ## Known Issues
 - Entering NULL information into any of the prompts will cause Phantomizer to fail
