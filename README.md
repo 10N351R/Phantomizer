@@ -5,6 +5,15 @@ Author: 10N351R, Base Functions Borrowed From: mrd0x
 
 Phantomizer is a post-exploitation utility for Windows targets that has the ability to run executables stored in C:/Windows/System32 with spoofed arguments to avoid disclosing "true" arguments to startup-based and runtime-based process monitors and logging solutions.
 
+**Note**
+I built this as I am currently a student progressing through the Maldev Academy curriculum. I was really interested in these techniques and I adapted some snippets from the course into a useable format. 
+
+Phantomizer hasn't been thoroughly tested so avoid using it in real red-team engagements. Currently it has no AV/EDR evasion mechanisms built-in so it will probably get flagged.
+
+Phantomizer is provided for educational and informational purposes only. Users are solely responsible for ensuring compliance with applicable laws and regulations when using Phantomizer. Be safe and enjoy!
+
+-10N351R 
+
 ## How Phantomizer Works
 To understand how Phantomizer spoofs arguments from process monitors, it is important to know how process monitors assimilate information. Primarily, process monitors employ two main methods to extract important information such as command line arguments, from a process' Process Environment Block (PEB).
 
@@ -12,7 +21,7 @@ To understand how Phantomizer spoofs arguments from process monitors, it is impo
 Startup monitoring is a method of process monitoring that relies on reading command line arguments from a target process' `PEB` structure upon creation of the process regardless of if the process is in a suspended state. This method of monitoring is relatively straightforward and is used by tools such as Process Monitor (Procmon).
 
 ### Runtime Monitoring
-In contrast to startup monitoring, runtime monitoring relies on extracting command line arguments from a process' `PEB` structure as the process is actively running. This is considered a more "advanced" and accurate monitoring method compared to startup monitoring. This method allows a monitoring process to view the actual real-time values of a target process' minimizing the chance of retrieving out-of-date information from a target process' `PEB` structure.
+In contrast to startup monitoring, runtime monitoring relies on extracting command line arguments from a process' `PEB` structure as the process is actively running. This is considered a more "advanced" and accurate monitoring method compared to startup monitoring. This method allows a monitoring process to view the actual real-time values of a target process' minimizing the chance of retrieving out-of-date information from a target process' `PEB` structure. This method is used by tools such as Process Hacker and Process Explorer.
 
 ### Phantomizer's Evasion Mechanisms 
 Phantomizer uses two different strategies for evading process monitors, tailored for each monitoring method.
