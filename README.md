@@ -8,7 +8,7 @@ Phantomizer is a post-exploitation utility for Windows targets that has the abil
 
 **Note:**
 
-I built this as I am currently a student progressing through the [Maldev Academy curriculum](https://maldevacademy.com/). I was really interested in these techniques and I adapted some snippets from the course into a this format. I can't take full credit for all of the code that I have used in Phantomizer because some of it is from course materials and is not original to me. Phantomizer hasn't been thoroughly tested so avoid using it in real red-team engagements. Currently it has no AV/EDR evasion mechanisms built-in so it will probably get flagged.
+I built this as I am currently a student progressing through the [Maldev Academy curriculum](https://maldevacademy.com/). I was really interested in these techniques and I adapted some snippets from the course into this project. I can't take full credit for all of the code that I have used in Phantomizer because some of it is from course materials and is not original to me. Phantomizer hasn't been thoroughly tested so avoid using it in real red-team engagements. Currently it has no AV/EDR evasion mechanisms built-in so it will probably get flagged.
 
 Phantomizer is provided for educational and informational purposes only. Users are solely responsible for ensuring compliance with applicable laws and regulations when using Phantomizer. Be safe and enjoy!
 
